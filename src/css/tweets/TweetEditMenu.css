@@ -1,0 +1,39 @@
+.TweetBtnContainer {
+    margin-top: 25px;
+    height: 20px;
+    display: block;
+}
+
+.TweetBtn {
+    font-size: 12px;
+    border: none;
+    background-color: #e1e3e5;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 19px;
+    width: 65px;
+    height: 14px;
+    padding: 3px 0px 6px 0px;
+    float: right;
+    display: inline-block;
+}
+
+    .TweetBtn:hover {
+        background-color: #cbced1;
+        cursor: pointer;
+    }
+
+button.TweetBtn {
+    font-size: 12px;
+    border: none;
+    background-color: #e1e3e5;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 19px;
+    width: 65px;
+    height: 14px;
+    padding: 5px 0px 19px 0px;
+    float: right;
+    display: inline-block;
+    margin: 0px;
+}

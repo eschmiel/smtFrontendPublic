@@ -1,0 +1,30 @@
+.UnlinkAccountConfirmMenu .SubmenuBtn {
+    display: inline-block;
+}
+
+.UnlinkAccountConfirmMenu .SubmenuBtn:first-child {
+    float: left;
+}
+
+.UnlinkAccountConfirmMenu .SubmenuBtn:last-child {
+    float: right;
+}
+
+.UnlinkAccountConfirmMenu .BtnContainer {
+    width: 319px;
+    margin: 36px auto;
+    overflow: auto;
+}
+
+.UnlinkAccountConfirmMenu .AccountContainer {
+    width: auto;
+    margin: auto;
+    display: table;
+}
+
+.UnlinkAccountConfirmMenu h3{
+    color: black;
+    width: 280px;
+    margin: 36px auto 0px;
+    text-align: center;
+}

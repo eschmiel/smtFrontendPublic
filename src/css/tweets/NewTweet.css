@@ -1,0 +1,14 @@
+.NewTweetBtn {
+    box-sizing: border-box;
+    background-color: #c4e6ef;
+    width: 126px;
+    height: 63px;
+    padding: 21px 0px;
+    text-align: center;
+    background-color: #e1e3e6;
+}
+
+.NewTweetBtn:hover {
+    background-color: #cbced1;
+    cursor: pointer;
+}

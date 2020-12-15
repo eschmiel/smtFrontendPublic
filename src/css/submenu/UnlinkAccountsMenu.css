@@ -1,0 +1,22 @@
+.UnlinkAccountsMenu .SubmenuBtn {
+    margin: 36px auto;
+    display:inline-block;
+}
+
+.UnlinkAccountsMenu .SubmenuBtn:first-child {
+    float:left;
+}
+
+.UnlinkAccountsMenu .SubmenuBtn:last-child {
+    float: right;
+}
+
+.UnlinkAccountsMenu .BtnContainer {
+    width: 319px;
+    margin: 0px auto;
+}
+
+.UnlinkAccountsMenu .AccountContainer {
+    width: 408px;
+    margin: auto;
+}

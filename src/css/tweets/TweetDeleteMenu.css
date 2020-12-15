@@ -1,0 +1,36 @@
+.TweetDeleteMenu h2 {
+    text-align: center;
+    width: 253px;
+    margin: 20px auto;
+    color: black;
+}
+
+
+.TweetDeleteBtnContainer {
+    width: 186px;
+    margin: 44px auto;
+    height: 1px;
+}
+
+.TweetDeleteBtn {
+    font-size: 12px;
+    border: none;
+    background-color: #e1e3e5;
+    font-weight: bold;
+    text-align: center;
+    width: 65px;
+    height: 14px;
+    padding: 3px 0px 6px 0px;
+    float: right;
+    display: inline-block;
+}
+
+.TweetDeleteBtn:first-child{
+    float: left;    
+}
+
+
+.TweetDeleteBtn:hover {
+    background-color: #cbced1;
+    cursor: pointer;
+}

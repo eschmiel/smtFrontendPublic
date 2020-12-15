@@ -1,0 +1,65 @@
+.Menubar {
+    height: 102px;
+    background-color: #c4e6ef;
+}
+
+.logo {
+    margin: 25px 27px;
+}
+
+.Menu {
+    display: inline;
+}
+
+.MenuBtn {
+    font: 24px Myriad Pro, sans-serif;
+    float: right;
+    padding: 36px 23px;
+    font-weight: normal;   
+    text-align: center;
+}
+
+.MenuBtn:hover {
+    background-color: #86d7ec;
+    cursor: pointer;
+}
+
+.MenuBtn:first-child {
+   padding-right: 27px;
+}
+
+.ContentBtn {
+    font-size: 12px;
+    border: none;
+    background-color: #e1e3e5;
+    font-weight: bold;
+    padding: 3px 14px 2px 14px;
+}
+
+.ContentBtn:hover {
+    background-color: #cbced1;
+    cursor: pointer;
+}
+
+.SubmenuBtn {
+    box-sizing: border-box;
+    background-color: #c4e6ef;
+    width: 126px;
+    height: 63px;
+    padding: 21px 0px;
+    text-align: center;
+}
+
+.SubmenuBtn:hover {
+    background-color: #86d7ec;
+    cursor: pointer;
+}
+
+#TweetsContainer {
+    width: 490px;
+    margin: 102px auto 0px;
+}
+
+.NewTweetBtn {
+    margin: 74px auto;
+}

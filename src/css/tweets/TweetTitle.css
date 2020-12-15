@@ -1,0 +1,18 @@
+.TweetTitle {
+    display: inline-block;
+    float: left;
+}
+
+.TweetTitle h2 {
+    margin: 8px 0px 0px 17px;
+}
+
+.TweetTitle input {
+    margin: 6px 0px 0px 6px;
+    padding: 3px 0px 2px 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 2px solid black;
+    width: 394px;
+    box-sizing: border-box;
+}

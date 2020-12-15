@@ -1,0 +1,14 @@
+.LinkedAccountsMenu .SubmenuBtn {   
+    margin: 36px auto;
+    display: block;
+}
+
+.LinkedAccountsMenu .AccountContainer {
+    width: 408px;
+    margin: auto;
+}
+
+.LinkedAccountsMenu a {
+    color: black;
+    text-decoration: none;
+}

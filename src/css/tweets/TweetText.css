@@ -1,0 +1,12 @@
+.TweetTextBox {
+    margin-top: 12px;
+    height: 80px;
+    background-color: white;
+}
+
+p.TweetTextContent {
+    padding: 8px 12px;
+    margin: 0px;
+    text-align: left;
+    font-size: 14px;
+}

@@ -1,0 +1,20 @@
+.SettingsMenu p {
+    text-align: center;
+}
+
+.SettingsMenu p:first-child{
+    margin-top: 36px;
+    margin-bottom: 0px;
+}
+
+.SettingsMenu p:nth-child(2){
+    margin: 0px; 
+}
+
+.SettingsMenu .SubmenuBtn{
+    display: inline-block;
+}
+
+.SettingsMenu .SubmenuBtn:nth-child(2) {
+    margin: 0px 15px;
+}

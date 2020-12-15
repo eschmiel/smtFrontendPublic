@@ -1,0 +1,15 @@
+.TwitterAccount {
+    display: inline-block;
+}
+
+.TwitterAccount h3, .TwitterAccount p {
+    color: black;
+    float: left;
+    margin: 0px;
+}
+
+.TwitterAccount p {
+    font-size: 16px;
+    margin-top: 3px;
+    margin-left: 4px;
+}

@@ -1,0 +1,12 @@
+.Submenu {
+    width: 448px;
+    background-color: #dff6fc;
+    margin-top: -4px;
+    position: fixed;
+    right: 0;
+}
+
+.Submenu .BtnContainer {
+    margin: 36px auto;
+    width: 408px;
+}

@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\login",
+    "\\src\\components\\submenu",
+    "\\src\\components\\submenu\\unlinkAccountMenu",
+    "\\src\\components\\tweets",
+    "\\src\\css"
+  ],
+  "PreviewInSolutionExplorer": false
+}

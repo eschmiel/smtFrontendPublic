@@ -1,0 +1,30 @@
+.DeleteAccountConfirmMenu .SubmenuBtn {
+    display: inline-block;
+}
+
+.DeleteAccountConfirmMenu .SubmenuBtn:first-child {
+        float: left;
+    }
+
+.DeleteAccountConfirmMenu .SubmenuBtn:last-child {
+    float: right;
+}
+
+.DeleteAccountConfirmMenu .BtnContainer {
+    width: 319px;
+    margin: 36px auto;
+    overflow: auto;
+}
+
+.DeleteAccountConfirmMenu .AccountContainer {
+    width: auto;
+    margin: auto;
+    display: table;
+}
+
+.DeleteAccountConfirmMenu h3 {
+    color: black;
+    width: 280px;
+    margin: 36px auto 0px;
+    text-align: center;
+}
