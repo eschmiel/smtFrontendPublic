@@ -1,4 +1,6 @@
 import React from 'react';
+import { userAccountMessenger } from '~/services/services.js';
+
 import '../../css/login/AccountForm.css';
 
 class CreateAccountForm extends React.Component {
@@ -33,25 +35,9 @@ class CreateAccountForm extends React.Component {
         newUserData.append('username', this.state.username);
         newUserData.append('password', this.state.password);
 
-        let createUserRequest = new Request('https://streamtoggle-backend.herokuapp.com/account/createUserAccount',
-            {
-                method: 'POST',
-                credentials: 'include',
-                body: newUserData
-            });
+        let loginSuccessful = await userAccountMessenger.createAccount(newUserData);
 
-        await fetch(createUserRequest);
-
-        let loginRequest = new Request('https://streamtoggle-backend.herokuapp.com/login',
-            {
-                method: 'POST',
-                credentials: 'include',
-                body: newUserData,                
-            });
-
-        let response = await fetch(loginRequest);
-        let data = await response.json();
-        this.props.onLogin(data.username);
+        if(loginSuccessful) this.props.onLogin(true);
     }
 
 

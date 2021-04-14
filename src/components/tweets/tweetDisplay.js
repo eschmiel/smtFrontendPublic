@@ -4,6 +4,8 @@ import TweetTitle from './tweetTitle.js';
 import TwitterAccount from './twitterAccount.js';
 import TweetText from './tweetText.js';
 import TweetDisplayMenu from './tweetDisplayMenu.js';
+import { tweetMessenger } from '~/services/services.js';
+
 
 class TweetDisplay extends React.Component {
     constructor(props) {
@@ -13,9 +15,8 @@ class TweetDisplay extends React.Component {
     }
 
     async toggleTweet() {
-        let updatedTweet = await fetch('https://streamtoggle-backend.herokuapp.com/tweet/toggleTweet/' + this.props.tweet.post_id, { method: 'POST', credentials: 'include' });
-        let processedUpdatedTweet = await updatedTweet.json();
-        this.props.refreshTweet(processedUpdatedTweet);
+        let updatedTweet = await tweetMessenger.toggleTweet(this.props.tweet.post_id);
+        this.props.refreshTweet(updatedTweet);
     }
 
     render() {

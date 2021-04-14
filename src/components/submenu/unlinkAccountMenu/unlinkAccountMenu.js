@@ -2,6 +2,7 @@ import React from 'react';
 import '../../../css/submenu/UnlinkAccountsMenu.css';
 import UnlinkAccountConfirmMenu from './unlinkAccountConfirmMenu.js';
 import UnlinkAccountSelectMenu from './unlinkAccountSelectMenu.js';
+import { twitterAccountMessenger } from '~/services/services.js';
 
 class UnlinkAccountsMenu extends React.Component {
     constructor(props) {
@@ -52,20 +53,12 @@ class UnlinkAccountsMenu extends React.Component {
 
 
     async unlinkAccount() {
-        const requestUrl = 'https://streamtoggle-backend.herokuapp.com/account/unlinkTwitterAccount';
         let requestData = new FormData();
         let selectedAccounts = this.getSelectedAccounts();
 
         selectedAccounts.forEach(account => requestData.append('account_id[]', account.account_id));
 
-        let unlinkRequest = new Request(requestUrl,
-            {
-                method: 'POST',
-                credentials: 'include',
-                body: requestData
-            });
-
-        await fetch(unlinkRequest);
+        await twitterAccountMessenger.unlinkTwitterAccounts(requestData);
 
         this.props.refreshLinkedAccounts();
         this.props.refreshTweets();       

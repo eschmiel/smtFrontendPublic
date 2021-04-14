@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/tweets/TweetEdit.css';
 import TweetForm from './tweetForm.js';
+import { endPoints } from '~/configs/mainConfig.js';
 
 
 class TweetEdit extends React.Component {
@@ -14,7 +15,7 @@ class TweetEdit extends React.Component {
             formOptions: {
                 tweet: Object.assign({}, props.tweet),                
                 twitterAccounts: props.twitterAccounts,                
-                submitRequestUrl: 'https://streamtoggle-backend.herokuapp.com/tweet/editTweet/' + props.tweet.post_id,
+                submitRequestUrl: endPoints.editTweet + props.tweet.post_id,
                 handlePostSubmit: this.handleReturnedEditedTweet,
                 onCancel: this.cancel
             }

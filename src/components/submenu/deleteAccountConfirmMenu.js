@@ -1,4 +1,6 @@
 import React from 'react';
+import { userAccountMessenger } from '~/services/services.js'; 
+
 import '../../css/submenu/DeleteAccountConfirmMenu.css';
 import Account from '../account.js';
 
@@ -11,7 +13,7 @@ class DeleteAccountConfirmMenu extends React.Component {
 
     
     async handleDelete() {
-        await fetch('https://streamtoggle-backend.herokuapp.com/account/deleteUserAccount', { method: 'POST', credentials: 'include' });
+        await userAccountMessenger.deleteUserAccount();
 
         this.props.onLogout();
     }

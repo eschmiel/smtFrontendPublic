@@ -23,8 +23,9 @@ class Submenu extends React.Component {
             case "Unlink Account": return <UnlinkAccountMenu changeSubmenuState={this.props.changeSubmenuState}
                                                              linkedAccounts={this.props.twitter_accounts}
                                                              refreshLinkedAccounts={this.props.refreshLinkedAccounts}
-                                                             refreshTweets={this.props.refreshTweets} />
-            case "Delete User": return <DeleteAccountConfirmMenu changeSubmenuState={this.props.changeSubmenuState} username={this.props.username} onLogout={this.props.onLogout} />
+                                                             refreshTweets={this.props.refreshTweets}
+                                                             />
+            case "Delete User": return <DeleteAccountConfirmMenu changeSubmenuState={this.props.changeSubmenuState} username={this.props.username} onLogout={this.props.onLogout}/>
             default: console.log('Submenu state changed to a not recognized state'); break;
         }
     }

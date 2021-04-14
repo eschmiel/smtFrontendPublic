@@ -1,21 +1,23 @@
 import React from 'react';
 import '../../css/tweets/TweetDeleteMenu.css';
 import TweetTitle from "./tweetTitle.js"; 
+import { tweetMessenger } from '~/services/services.js';
 
 class TweetDeleteMenu extends React.Component {
     constructor(props) {
         super(props);
 
         this.cancel = this.cancel.bind(this);
-        this.requestTweetDelete = this.requestTweetDelete.bind(this);
+        this.deleteTweet = this.deleteTweet.bind(this);
     }
 
     cancel() {
         this.props.onChangeTweetState('Display');
     }
 
-    requestTweetDelete() {
-        fetch('https://streamtoggle-backend.herokuapp.com/tweet/deleteTweet/' + this.props.tweet.post_id, { method: 'POST', credentials: 'include' }).then((response) => this.props.updateTweets() );
+    async deleteTweet() {
+        await tweetMessenger.deleteTweet(this.props.tweet.post_id);
+        this.props.updateTweets();
     }
 
     render() {
@@ -32,7 +34,7 @@ class TweetDeleteMenu extends React.Component {
                             Are you sure you want to delete this tweet?
                         </h2>
                         <div className="TweetDeleteBtnContainer">
-                            <div className="TweetDeleteBtn" onClick={this.requestTweetDelete} > CONFIRM</div>
+                            <div className="TweetDeleteBtn" onClick={this.deleteTweet} > CONFIRM</div>
                             <div className="TweetDeleteBtn" onClick={this.cancel} >CANCEL</div>
                         </div>
                     </div>

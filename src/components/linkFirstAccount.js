@@ -1,4 +1,6 @@
 import React from 'react';
+import { twitterAccountMessenger } from '~/services/services.js';
+
 import '../css/FreshAccount.css';
 
 
@@ -11,9 +13,10 @@ class LinkFirstAccount extends React.Component {
 
 
     componentDidMount() {
-        fetch('https://streamtoggle-backend.herokuapp.com/account/linkTwitterAccount', { method: 'GET', credentials: 'include' }).then(response => response.text()).then(link => this.setState({ authorizationLink: link }));
+        twitterAccountMessenger.linkTwitterAccount()
+            .then((authorizationLinks) => this.setState({ authorizationLink: authorizationLinks }));
     }
-
+    
 
     render() {
         return (

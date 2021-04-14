@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/tweets/TweetEdit.css';
-import TweetTitleForm from './tweetTitleform';
+import TweetTitleForm from './tweetTitleForm';
 import TwitterAccountForm from './twitterAccountForm';
 import TweetTextForm from './tweetTextForm.js';
 import TweetEditMenu from './tweetEditMenu.js';

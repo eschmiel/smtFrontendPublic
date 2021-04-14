@@ -1,4 +1,6 @@
 import React from 'react';
+import { twitterAccountMessenger } from '~/services/services.js';
+
 import '../../css/submenu/LinkedAccountsMenu.css';
 import AccountList from '../accountList.js';
 
@@ -10,7 +12,8 @@ class LinkedAccountsMenu extends React.Component {
     }
 
     componentDidMount() {
-        fetch('https://streamtoggle-backend.herokuapp.com/account/linkTwitterAccount', {method: 'GET', credentials: 'include'}).then(response => response.text()).then(link => this.setState({ authorizationLink: link }));
+        twitterAccountMessenger.linkTwitterAccount()
+            .then((authorizationLink) => this.setState({ authorizationLink: authorizationLink }));
     }
 
     render() {

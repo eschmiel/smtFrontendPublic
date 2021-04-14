@@ -1,36 +1,34 @@
 import React from 'react';
-import NotLoggedIn from './components/notLoggedIn.js';
-import LoggedIn from './components/loggedIn';
-import './css/MainCSS.css';
-import SecurityWarning from './components/securityWarning.js';
+import Utilities from './utilities.js';
 
+import LoggedIn from '~/components/loggedIn.js'
+import NotLoggedIn from '~/components/notLoggedIn.js'
+import SecurityWarning from '~/components/securityWarning.js';
+
+import '~/css/MainCSS.css';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
 
-        this.setUsername = this.setUsername.bind(this);
-
+        this.changeLoginStatus = this.changeLoginStatus.bind(this);
         this.state = {
-            username: document.cookie.split('=')[1]        
+            loggedIn: false
         };
     }
 
-    setUsername(newUsername) {
-        this.setState({ username: newUsername });
-
-        document.cookie = "username=" + newUsername;
+    changeLoginStatus(status) {
+        this.setState({ loggedIn: status });
     }
 
     render() {
         return (
             <div>
-                {this.state.username ? <LoggedIn username={this.state.username} onLogout={this.setUsername} /> : <NotLoggedIn onLogin={this.setUsername} />}
+                { this.state.loggedIn || Utilities.doesCookieExist('loggedIn') ? <LoggedIn /> : <NotLoggedIn onLogin={this.changeLoginStatus} /> }
                 <SecurityWarning />
             </div>    
         );
     }
 }
-
 
 export default App;

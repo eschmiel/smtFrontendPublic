@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/tweets/NewTweet.css';
 import TweetForm from './tweetForm.js';
+import { endPoints } from '~/configs/mainConfig.js';
 
 class NewTweet extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class NewTweet extends React.Component {
                 tweet: {},
                 twitterAccounts: props.twitterAccounts,
                 addedSubmitData: { username: props.username },
-                submitRequestUrl: 'https://streamtoggle-backend.herokuapp.com/tweet/createTweet/',
+                submitRequestUrl: endPoints.createTweet,
                 handlePostSubmit: this.postCreateTweetFormSubmit,
                 onCancel: this.setButtonState
             }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { userAccountMessenger } from '~/services/services.js';
+
 import Submenu from './submenu/submenu.js';
 
 class Menu extends React.Component {
@@ -10,7 +12,7 @@ class Menu extends React.Component {
         }
 
         this.changeSubmenuState = this.changeSubmenuState.bind(this);
-        this.logout = this.logout.bind(this);
+        this.logout = userAccountMessenger.logout.bind(this);
     }
 
 
@@ -19,18 +21,6 @@ class Menu extends React.Component {
         if (event) newState = event.target.id; else newState = '';
 
         this.setState({ submenuState: newState });
-    }
-
-
-    logout() {
-        fetch('https://streamtoggle-backend.herokuapp.com/logout', { method: 'POST', credentials: 'include' });
-
-        let expirationDate = new Date();
-
-        this.props.onLogout('');
-
-        document.cookie = "username=; domain=http://www.studioschmiel.com; expires=" + expirationDate.toUTCString(); 
-        document.cookie = "connect.sid=; domain=http://www.studioschmiel.com; expires=" + expirationDate.toUTCString(); 
     }
 
 
@@ -46,7 +36,8 @@ class Menu extends React.Component {
                          username={this.props.username}
                          twitter_accounts={this.props.twitter_accounts}
                          refreshLinkedAccounts={this.props.refreshLinkedAccounts}
-                         refreshTweets={this.props.refreshTweets} />
+                         refreshTweets={this.props.refreshTweets}
+                />
             </div>
         );
     }
